@@ -1,0 +1,274 @@
+.hero {
+    .img-box {
+        width: 90%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        margin: 0 auto !important;
+
+        h2 {
+            width: 80%;
+            font-size: 3.5rem;
+            font-weight: bolder;
+
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+
+        .my-btn {
+            border: 2px solid #B9FF66;
+            outline: none;
+            background-color: #000;
+            color: #fff;
+            font-size: 1.5rem;
+            padding: 20px 25px;
+            border-radius: 20px;
+
+            &:hover {
+                background-color: #B9FF66;
+                color: #000;
+                transition-duration: 0.7s;
+                border: 2px solid #000;
+            }
+        }
+    }
+
+    .box {
+        img {
+            filter: grayscale(100%);
+            transition: 0.3s ease;
+
+            &:hover {
+                filter: grayscale(0%);
+                transition: 0.3s ease;
+            }
+        }
+    }
+}
+
+
+
+// hero-end
+
+
+
+$box-colors-service: (
+    1: #F3F3F3,
+    2:#B9FF66,
+    3:#191A23,
+    4: #F3F3F3,
+    5:#B9FF66,
+    6:#191A23
+);
+$box-colors-service-hover: (
+    1:#191A23,
+    2: #F3F3F3,
+    3:#B9FF66,
+    4:#191A23,
+    5: #F3F3F3,
+    6:#B9FF66
+);
+
+.services {
+
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 3rem;
+        h3{
+            background-color: #B9FF66;
+            font-size: 2.5rem;
+            padding: 8px 20px;
+            border-radius: 25px;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    }
+    .service-container {
+        width: 45%;
+        border: 2px solid #000;
+        border-radius: 50px;
+        border-bottom: 8px solid #000;
+        padding: 45px 20px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+        @each $index, $color in $box-colors-service {
+            &:nth-child(#{$index}) {
+                background-color: $color;
+            }
+        }
+
+        &:hover {
+            @each $index, $color in $box-colors-service-hover {
+                &:nth-child(#{$index}) {
+                    background-color: $color;
+                }
+            }
+
+            transition: 0.6s ease-in-out;
+           a{
+            color: #77c319;
+           }
+        }
+
+        .service-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            h3{
+                background: #fff;
+                padding: 10px 10px;
+                font-size: 2.1rem;
+                border-radius: 15px;
+
+            }
+        }
+        a{
+            display:flex ;
+            align-items: center;
+            gap: 2rem;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            color: #000;
+            .icon{
+                display: block;
+                color: #fff;
+                background-color: #77c319;
+                font-size: 1.1rem !important;
+                padding: 6px 10px;
+                border-radius: 50px;
+                margin-left: 1rem;
+            }
+        }
+    }
+
+}
+
+// services-end
+
+.cta{
+    background-color: #F3F3F3;
+    border-radius: 80px;
+    .img-box{
+        background-color: #F3F3F3;
+        width: 80%;
+        img{
+            width: 100%;
+        }
+    }
+    h4{
+        font-size:2.4rem;
+        font-weight: bolder;
+    }
+    .my-btn {
+        border: 2px solid #B9FF66;
+        outline: none;
+        background-color: #000;
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 15px 20px;
+        border-radius: 20px;
+
+        &:hover {
+            background-color: #B9FF66;
+            color: #000;
+            transition-duration: 0.7s;
+            border: 2px solid #000;
+        }
+    }
+}
+
+
+.contact{
+    background-color: #F3F3F3;
+    border-radius: 100px;
+    .title{
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 3rem;
+        h3{
+            background-color: #B9FF66;
+            font-size: 2.5rem;
+            padding: 8px 20px;
+            border-radius: 25px;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    }
+    .my-container {
+        .btn {
+          width: 100%;
+          border: 1px solid #000;
+          background-color: #000;
+          color: #fff;
+          font-weight: bolder;
+          outline: none;
+          font-size: 0.9rem;
+          padding: 0.5rem 2rem;
+          border-radius: 5rem;
+          transition-duration: 0.5s;
+          cursor: pointer !important;
+          &:hover{
+            background-color: #B9FF66;
+          }
+    
+        }
+      
+        .contact-form {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          padding: 4rem 2rem;
+          background: #F3F3F3;
+          border-radius: 15px;
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+        }
+      
+        .input-group {
+          display: flex;
+          flex-direction: column;
+          gap: 1.3rem;
+        }
+      
+        .input-wrapper {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+      
+        .input-field {
+          padding: 18px;
+          border-radius: 5px;
+          border: 1px solid #000;
+          font-size: 18px;
+          background-color: #fff;
+        }
+      
+        .textarea-field {
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #000;
+          font-size: 18px;
+          height: 150px;
+          background-color: #fff;
+        }
+      }
+      img{
+        width: 50%;
+      }
+      
+}
