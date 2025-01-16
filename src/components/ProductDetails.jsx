@@ -1,12 +1,12 @@
 import React from 'react';
-import { useParams } from 'react-router-dom'; // URL-dən parametrləri almaq üçün
+import { useParams } from 'react-router-dom'; 
 
 import { Card, Container, Row, Col, Button } from 'react-bootstrap';
 import { useGetProductByIdQuery } from '@/redux/api/product';
 
 const ProductDetails = () => {
-  const { id } = useParams(); // URL-dəki məhsul id-ni alırıq
-  const { data, error, isLoading } = useGetProductByIdQuery(id); // Müəyyən id ilə məhsulu çəkmək üçün hook
+  const { id } = useParams(); 
+  const { data, error, isLoading } = useGetProductByIdQuery(id); 
 
   if (isLoading) {
     return <p>Loading product details...</p>;
