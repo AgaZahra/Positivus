@@ -3,6 +3,7 @@ export const urls = {
     ABOUT:'/about',
     SERVICES:'/services',
     PRICING:'/pricing',
-    BLOG:'/blog'
+    BLOG:'/blog',
+    PRODUCt:'/product'
   };
   
