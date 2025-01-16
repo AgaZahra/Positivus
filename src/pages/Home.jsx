@@ -96,7 +96,7 @@ const Home = () => {
                     </Row>
                     <Row className='my-5'>
                         {services.map((service) => (
-                            <Col sm={12} md={4} lg={6} className='service-container mx-4 g-5'>
+                            <Col sm={12} md={4} lg={6} key={service.id} className='service-container mx-4 g-5'>
                                 <div key={service.id} className="service-card">
                                     <h3>{service.title}</h3>
                                     <img src={service.image} alt={service.title} />

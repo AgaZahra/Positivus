@@ -10,15 +10,16 @@ import About from '@/pages/About';
 import Services from '@/pages/Services';
 import Pricing from '@/pages/Pricing';
 import Blog from '@/pages/Blog';
+import ProductDetails from './components/ProductDetails';
 
 const App = () => {
   const router= createBrowserRouter(
     createRoutesFromElements(
       <Route path={urls.HOME}  element={<Layout/>} >
-
-
       <Route path={urls.HOME}  element={<Home/>} />
       <Route path={urls.ABOUT}  element={<About/>} />
+      <Route path={`/product/:id`}  element={<ProductDetails/>}/>
+      
       <Route path={urls.SERVICES}  element={<Services/>} />
       <Route path={urls.PRICING}  element={<Pricing/>} />
       <Route path={urls.BLOG}  element={<Blog/>} />
